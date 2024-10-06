@@ -1,0 +1,22 @@
+<ng-container *ngIf="listOfRest.length" >
+  <div class="container">
+<div class="container__list"  *ngFor="let list of listOfRest">
+  <div>
+   Name -  {{list.name}}
+  </div>
+  <div>
+   Location - {{list.location}}
+  </div>
+  <div>
+   Phone Numner - {{list.phoneNumber}}
+  </div>
+
+  <button (click)="clickme()">icon</button>
+
+</div>
+<div class="container__open-form-button">
+<button (click)="openForm()">Add More to the list</button>
+</div>
+</div>
+
+</ng-container>

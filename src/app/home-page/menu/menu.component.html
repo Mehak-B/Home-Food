@@ -1,0 +1,32 @@
+<div class=" main-container">
+
+<div class="main-container__navbar">
+    <div class="main-container__navbar__image">
+        <img src="./../../../assets/bike.jpg">
+    </div>
+    <div class="main-container__navbar__nav">
+    <nav>
+        <ul>
+           <li  *ngFor="let item of menu" (click)="navButton(item)">{{item}}</li> 
+        </ul>
+    </nav>
+</div>
+</div>
+
+<ng-container *ngIf="showFoodPlatform">
+<div class="main-container__food-platform">
+    <app-food-platform></app-food-platform>
+</div>
+</ng-container>
+
+<ng-container *ngIf="!showFoodPlatform">
+    <div>
+        A food delivery app is a platform that allows users to browse local restaurants, order food, and have it 
+        delivered to their doorstep. Users can explore a wide range of cuisines, customize their meals,
+         track orders in real-time, and make secure payments. The app often includes features like user reviews, 
+         special discounts, and personalized recommendations to enhance the dining experience.
+    </div>
+</ng-container>
+
+</div>
+

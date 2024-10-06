@@ -1,0 +1,20 @@
+.main-container{
+
+&__navbar{
+    display:flex;
+    &__image img{
+        width:100px;
+        height:100px;
+    }
+    &__nav{
+        li{
+            cursor: pointer;
+        }
+          
+    }
+}
+
+&__food-platform{
+
+}
+}

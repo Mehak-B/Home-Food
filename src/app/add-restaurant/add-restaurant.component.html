@@ -1,0 +1,77 @@
+<!-- <div class="add-restauranr-wrapper">
+ 
+<div class="add-restauranr-wrapper__btn">
+    <button [routerLink]="['/home-page']">Search or add your fav Restaurant</button>
+</div> 
+</div> -->
+
+<div class="food-platform-wrapper">
+    <div class="food-platform-wrapper__form">
+      <form [formGroup]="restaurantForm" (ngSubmit)="onSubmit()">
+        <!-- <div formArrayName="formArray"> -->
+          <div>
+            <label for="name">Name:</label>
+            <input id="name" formControlName="name">
+            <div *ngIf="restaurantForm.get('name')?.invalid && (restaurantForm.get('name')?.dirty || restaurantForm.get('name')?.touched)">
+              <div *ngIf="restaurantForm.get('name')">Name is required.</div>
+              <div *ngIf="restaurantForm.get('name')">Name must be at least 3 characters long.</div>
+            </div>
+          </div>
+      
+  
+          <div>
+              <label for="location">Location:</label>
+              <input id="location" formControlName="location">
+              <div *ngIf="restaurantForm.get('location')?.invalid && (restaurantForm.get('location')?.dirty || restaurantForm.get('location')?.touched)">
+                <div *ngIf="restaurantForm.get('location')">Location is required.</div>
+              </div>
+            </div>
+          
+            <div>
+              <label for="phoneNumber">Phone Number:</label>
+              <input id="phoneNumber" formControlName="phoneNumber">
+              <div *ngIf="restaurantForm.get('phoneNumber')?.invalid && (restaurantForm.get('phoneNumber')?.dirty || restaurantForm.get('phoneNumber')?.touched)">
+                <div *ngIf="restaurantForm.get('phoneNumber')">Phone number is required.</div>
+                <div *ngIf="restaurantForm.get('phoneNumber')">Invalid phone number format.</div>
+              </div>
+            </div>
+  
+            <!-- <div>
+              <label for="website">Website:</label>
+              <input id="website" formControlName="website">
+              <div *ngIf="restaurantForm.get('website')?.invalid && (restaurantForm.get('website')?.dirty || restaurantForm.get('website')?.touched)">
+                <div *ngIf="restaurantForm.get('website')">Invalid website URL format.</div>
+              </div>
+            </div> -->
+          
+            <!-- <div formGroupName="openingHours">
+              <div>
+                <label for="openingTime">Opening Time:</label>
+                <input id="openingTime" formControlName="openingTime" type="time">
+                <div *ngIf="restaurantForm.get('openingHours.openingTime')?.invalid && (restaurantForm.get('openingHours.openingTime')?.dirty || restaurantForm.get('openingHours.openingTime')?.touched)">
+                  <div *ngIf="restaurantForm.get('openingHours.openingTime')">Opening time is required.</div>
+                </div>
+              </div>
+  
+              <div>
+                  <label for="closingTime">Closing Time:</label>
+                  <input id="closingTime" formControlName="closingTime" type="time">
+                  <div *ngIf="restaurantForm.get('openingHours.closingTime')?.invalid && (restaurantForm.get('openingHours.closingTime')?.dirty || restaurantForm.get('openingHours.closingTime')?.touched)">
+                    <div *ngIf="restaurantForm.get('openingHours.closingTime')">Closing time is required.</div>
+                  </div>
+                </div>
+              </div>  -->
+            
+              <button type="submit" [disabled]="restaurantForm.invalid">Submit</button>
+          <!-- </div> -->
+            </form>
+          </div>
+  
+          <ng-container *ngIf="restaurantForm.valid">
+            <button class="food-platform-wrapper__add-more-btn" (click)="addMore()"> Add more </button>
+          </ng-container>
+  
+          <!-- <button class="food-platform-wrapper__add-more-btn" (click)="add()"> Add more </button> -->
+  
+  </div>
+  

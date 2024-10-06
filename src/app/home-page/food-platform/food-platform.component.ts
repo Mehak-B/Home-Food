@@ -40,6 +40,6 @@ listOfRest = [{
 
 clickme()
 {
-  
+  console.log("something")
 }
 }

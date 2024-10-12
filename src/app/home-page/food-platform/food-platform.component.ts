@@ -26,7 +26,7 @@ export class FoodPlatformComponent implements OnInit{
   }
 
 listOfRest = [{
-  name:"mcD",
+  name:"simo",
   location:"indira nagar",
   phoneNumber:"9988776623",
 },
@@ -41,14 +41,21 @@ listOfRest = [{
   phoneNumber:"9988774578",
 }]
 
-// iconOptions: Interface[] = [
-//   {value: 'del-0', viewValue: 'Delete'},
-//   {value: 'edit-1', viewValue: 'Edit'},
-// ];
+iconOptions: Interface[] = [
+  {value: 'del-0', viewValue: 'Delete'},
+  {value: 'edit-1', viewValue: 'Edit'},
+];
 
-clickme()
-{
 
-  console.log("something")
+optionClick(i:any){
+return i
+}
+clickMe(idx:any, ind:number){
+  console.log(idx, ind)
+  if(idx = 'del-0'){ 
+    this.listOfRest.splice(ind, 1)
+    console.log(this.listOfRest.splice(idx, 1))
+  }
+
 }
 }

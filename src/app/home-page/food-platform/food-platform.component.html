@@ -1,6 +1,6 @@
 <ng-container *ngIf="listOfRest.length" >
   <div class="container">
-<div class="container__list"  *ngFor="let list of listOfRest">
+<div class="container__list"  *ngFor="let list of listOfRest; let i = index">
   <div>
    Name -  {{list.name}}
   </div>
@@ -11,12 +11,9 @@
    Phone Numner - {{list.phoneNumber}}
   </div>
 
-  <button (click)="clickme()">icon</button>
 
-<!-- <button mat-button [matMenuTriggerFor]="menu" #menuTrigger>Menu</button>
-<mat-menu #menu="matMenu" *ngFor="let item of iconOptions">
-  <button mat-menu-item>{{item.viewValue}}</button>
-</mat-menu> -->
+<button mat-button [matMenuTriggerFor]="menu" (click)="optionClick(i)">Options</button>
+
 
 </div>
 <div class="container__open-form-button">
@@ -25,3 +22,7 @@
 </div>
 
 </ng-container>
+
+<mat-menu #menu="matMenu" >
+  <button (click)="clickMe(item.value, i)" *ngFor="let item of iconOptions;  let i = index">{{ item.viewValue}}</button>
+</mat-menu>

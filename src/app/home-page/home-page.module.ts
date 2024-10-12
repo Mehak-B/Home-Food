@@ -5,6 +5,8 @@ import { HomePageRoutingModule } from '../home-page-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MenuComponent } from './menu/menu.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatMenuModule, MatMenuTrigger } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
 
 
 
@@ -18,7 +20,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     CommonModule,
     HomePageRoutingModule,
     MatDialogModule,
-  
+    MatMenuModule,
+    MatButtonModule,   
   
   
   ]

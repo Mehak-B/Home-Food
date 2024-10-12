@@ -1,12 +1,15 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
 import { AddRestaurantComponent } from 'src/app/add-restaurant/add-restaurant.component';
+import { Interface } from 'src/app/interface';
 
 @Component({
   selector: 'app-food-platform',
   templateUrl: './food-platform.component.html',
   styleUrls: ['./food-platform.component.scss']
 })
+
+
 export class FoodPlatformComponent implements OnInit{
   constructor(public dialog: MatDialog,
 
@@ -38,8 +41,14 @@ listOfRest = [{
   phoneNumber:"9988774578",
 }]
 
+// iconOptions: Interface[] = [
+//   {value: 'del-0', viewValue: 'Delete'},
+//   {value: 'edit-1', viewValue: 'Edit'},
+// ];
+
 clickme()
 {
+
   console.log("something")
 }
 }
